@@ -279,15 +279,22 @@ document.addEventListener("DOMContentLoaded", function () {
     function submitAnswer() {
         const userAnswer = answerInput.value.trim().toLowerCase();
         const currentQuestion = questions[currentQuestionIndex];
-
+    
         if (userAnswer === currentQuestion.answer.toLowerCase()) {
             score++;
             alert("Correct!");
-        } 
-        else {
+        } else {
             alert("Try again or view the answer!");
         }
+    
+        updateScoreCard();
     }
+
+function updateScoreCard() {
+    const scoreCard = document.getElementById("score-card");
+    scoreCard.textContent = "Score: " + score;
+}
+
 
     function showHint() {
         const currentQuestion = questions[currentQuestionIndex];
