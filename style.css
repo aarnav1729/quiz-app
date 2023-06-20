@@ -57,6 +57,13 @@ button {
     margin-left: auto;
 }
 
+#score-card {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 @media (max-width: 500px) {
     .button-container {
         flex-wrap: wrap;
