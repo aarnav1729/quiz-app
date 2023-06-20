@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Quiz Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -11,9 +12,11 @@
         <div id="question-container" class="card">
             <p id="question-text"></p>
             <input type="text" id="answer-input" placeholder="Your answer">
-            <button id="submit-button">Submit</button>
-            <button id="hint-button">Hint</button>
-            <button id="answer-button">View Answer</button>
+            <div class="button-container">
+                <button id="submit-button">Submit</button>
+                <button id="hint-button">Hint</button>
+                <button id="answer-button">View Answer</button>
+            </div>
             <p id="feedback-text"></p>
             <div id="navigation">
                 <button id="previous-button">Previous</button>
