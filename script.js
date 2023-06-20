@@ -282,45 +282,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (userAnswer === currentQuestion.answer.toLowerCase()) {
             score++;
-            feedbackText.textContent = "Correct!";
-            feedbackText.style.color = "green";
-        } else {
-            feedbackText.textContent = "Incorrect. Try again!";
-            feedbackText.style.color = "red";
+            alert("Correct!");
+        } 
+        else {
+            alert("Try again or view the answer!");
         }
     }
 
     function showHint() {
-          const currentQuestion = questions[currentQuestionIndex];
-          const hint = currentQuestion.hint;
-        
-          // Create a popup element
-          const popup = document.createElement("div");
-          popup.classList.add("popup");
-        
-          // Create the hint content
-          const hintContent = document.createElement("p");
-          hintContent.textContent = `Hint: ${hint}`;
-          hintContent.classList.add("hint-content");
-        
-          // Create the close button
-          const closeButton = document.createElement("button");
-          closeButton.textContent = "Close";
-          closeButton.classList.add("close-button");
-        
-          // Add the hint content and close button to the popup
-          popup.appendChild(hintContent);
-          popup.appendChild(closeButton);
-        
-          // Append the popup to the document body
-          document.body.appendChild(popup);
-        
-          // Close the popup when the close button is clicked
-          closeButton.addEventListener("click", function () {
-            document.body.removeChild(popup);
-  });
-}
-
+        const currentQuestion = questions[currentQuestionIndex];
+        const hint = currentQuestion.hint;
+        alert(currentQuestion.hint);
+    }
 
     function viewAnswer() {
         const currentQuestion = questions[currentQuestionIndex];
