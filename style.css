@@ -28,8 +28,15 @@ input[type="text"] {
     margin-bottom: 10px;
 }
 
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
 button {
-    padding: 10px 20px;
+    flex-basis: 30%;
+    padding: 10px;
     background-color: #51D09E;
     color: #000000;
     border: none;
@@ -48,4 +55,24 @@ button {
 
 #next-button {
     margin-left: auto;
+}
+
+@media (max-width: 500px) {
+    .button-container {
+        flex-wrap: wrap;
+    }
+    
+    button {
+        flex-basis: 48%;
+        margin-bottom: 10px;
+    }
+    
+    #navigation {
+        flex-wrap: wrap;
+    }
+    
+    #previous-button,
+    #next-button {
+        flex-basis: 48%;
+    }
 }
